@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        body{
+    <style> 
+        body {
             height: 100vh;
             width: 100vw;
-            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            background: linear-gradient(135deg, #031236, #0438e3);
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            line-height: 0%;
+            line-height: 30%;
             align-items: center;
             justify-content: center;
             color: white;
@@ -20,9 +19,40 @@
         }
     </style>
 </head>
+
 <body>
-    <h1>WELCOME TO THE GAME</h1>
-    <p>(Please proceed to console)</p>
+    <div class="wrapper"
+        style="display: flex; flex-direction: column; height: 100%;  align-items: center; ">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <h2>Choose your Option</h2>
+        <h5>First person to score higher out of 5 times will win the Game</h3>
+            <div class="display-score"
+                style="display: grid; grid-template-columns: repeat(2,1fr); grid-template-rows: repeat(2,1fr);">
+                <h1 class="human-score" style=" text-align: center;">0</h1>
+                <h1 class="computer-score" style="text-align: center;">0</h1>
+                <p>Human Score</p>
+                <p>Computer Score</p>
+            </div>
+
+            <div style = "display: flex; gap: 30px; cursor: pointer;">
+                <div class="human-choice" style = "height: 50px; width: 150px; background-color: blue; 
+                padding: 30px; box-sizing: border-box; border-radius: 5px;">ROCK</div>
+                <div class="human-choice" style = "height: 50px; width: 150px; background-color: blue; 
+                padding: 30px; box-sizing: border-box; border-radius: 5px;">PAPER</div>
+                <div class="human-choice" style = "height: 50px; width: 200px; background-color: blue; 
+                padding: 30px; box-sizing: border-box; border-radius: 5px;">SCISSORS</div>
+            </div>
+
+            <div style="height: 20px;"></div>
+            <button onclick="askResetGame()" style="border: none; background: none; background-color: blue; color: white; box-sizing: border-box; padding: 20px; border-radius: 5px; font-size: large; font-weight: 800;">RESET GAME</button>
+            <div style="height: 20px;"></div>
+            <!-- <div class="final-winner">
+                <p>FINAL WINNER </p>
+            </div> -->
+            
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
